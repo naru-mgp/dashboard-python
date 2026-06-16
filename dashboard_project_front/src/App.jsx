@@ -1,31 +1,15 @@
-import { useState, useEffect } from 'react'
+import { Routes, Route } from 'react-router-dom'
+import AppLayout from './components/layout/AppLayout'
+import DashboardPage from './pages/DashboardPage'
+import CoinDetailPage from './pages/CoinDetailPage'
 
-function App() {
-
-  const [coins, setCoins] = useState([])
-
-  useEffect(() => {
-
-    async function cargarDatos() {
-
-      const response = await fetch('http://127.0.0.1:8000/api/coins/')
-
-      const data = await response.json()
-
-      setCoins(data)
-    }
-
-    cargarDatos()
-
-  }, [])
-
-  console.log(coins)
-
+export default function App() {
   return (
-    <div>
-      <h1>Dashboard Cripto</h1>
-    </div>
+    <Routes>
+      <Route element={<AppLayout />}>
+        <Route index element={<DashboardPage />} />
+        <Route path="coin/:coinId" element={<CoinDetailPage />} />
+      </Route>
+    </Routes>
   )
 }
-
-export default App

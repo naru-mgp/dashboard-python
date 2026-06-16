@@ -47,7 +47,7 @@ def coin_history(request, coin_id):
 
     history = MarketSnapshots.objects.filter(coin__coingecko_id=coin_id)
 
-    history = history.order_by("timestamp")
+    history = history.order_by("-timestamp")
 
     serializer = CoinHistoryFE(
         history,

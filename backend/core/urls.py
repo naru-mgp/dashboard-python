@@ -13,7 +13,7 @@ urlpatterns = [
 
     path("coins/<str:coin_id>/history", coin_history),
 
-    path("coins/<str:coin_id>/lastest", last_snapshot),
+    path("coins/<str:coin_id>/latest", last_snapshot),
 
     path("coins/<str:coin_id>", coin_detail),
 

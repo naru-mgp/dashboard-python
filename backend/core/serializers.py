@@ -26,6 +26,7 @@ class MarketSnapshotSerializer(serializers.ModelSerializer):
                   "coin",
                   "price",
                   "market_cap",
+                  "volume",
                   "timestamp"
                   ]
 #-------------------------------------------------------------------        
@@ -37,7 +38,8 @@ class CoinSerializerFE(serializers.ModelSerializer):
         model = Coin
 
         fields = ["name",
-                  "symbol"
+                  "symbol",
+                  "coingecko_id"
                  ]
 
 class CoinDetailSerializerFE(serializers.ModelSerializer):
@@ -60,6 +62,7 @@ class MarketSnapshotSerializerFE(serializers.ModelSerializer):
         fields = ["coin",
                   "price",
                   "market_cap",
+                  "volume",
                   "timestamp"
                   ]
 

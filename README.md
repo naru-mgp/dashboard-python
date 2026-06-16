@@ -41,20 +41,6 @@ Abrir `http://localhost:5173` 🚀
 
 ---
 
-## 🛠️ Próximos pasos para aprender
-
-Si quieres profundizar, intenta:
-
-1. **Agregar WebSocket** (Django Channels + Socket.io) en vez de polling
-2. **Agregar filtros** (por precio, market cap) a la tabla
-3. **AGREGAR MÁS RUTAS**: comparativa entre monedas, portafolio personal
-4. **Persistencia de búsqueda** en URL con searchParams
-5. **Modo oscuro/claro** toggle
-6. **Testing**: Vitest + React Testing Library
-7. **Estado global**: Context API o Zustand para preferencias de usuario
-
----
-
 ## Endpoints de la API
 
 | Método | Ruta | Descripción |
